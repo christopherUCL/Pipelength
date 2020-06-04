@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
-import math, os
+import math
+import os
 from flask import Flask, render_template, request
 
 # 1. API call to fluid properties website
