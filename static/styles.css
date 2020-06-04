@@ -1,5 +1,5 @@
 .container {
-display: block;
+display: inline;
 
 }
 
@@ -9,4 +9,11 @@ display: block;
 
 .form-group{
     display: block;
+}
+.btn{
+    color: red;
+}
+h1{
+    color: green;
+    font-weight: bold;
 }

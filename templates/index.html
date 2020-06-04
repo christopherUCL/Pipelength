@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/styles.css">
+        <title> Estimate pipe length </title>
+    </head>
+
+    <body>
+        <div class="container">
+            <img src="../static/logo.jpg" class="logo" alt="calculate pipe length">
+
+            <!--@todo -message -->>
+            {% if message %}
+
+            <p>{{ message|safe}}</p>
+
+            {% endif %}
+
+            <form action="/submit" method="POST">
+                <div class="form-group">
+                    <h3>Pipe inner diameter (m)</h3>
+                    <input type="text" name="pipe_inner_dia" placeholder="pipe inner diameter">
+                </div>
+
+                <div class="form-group">
+                    <h3>Pipe outer diameter (m)</h3>
+                    <input type="text" name="pipe_outer_dia" placeholder="pipe outer diameter">
+                </div>
+
+                <div class="form-group">
+                    <h3>Rate of heat gain (W)</h3>
+                    <input type="text" name="Q_dot_watts" placeholder="Heat transfer rate to cold fluid">
+                </div>
+
+                <div class="form-group">
+                    <h3>Convective heat transfer coefficient outsider the pipe(W/m2K)</h3>
+                    <input type="text" name="h_out" placeholder="Heat transfer rate to cold fluid">
+                </div>
+
+                <div class="form-group">
+                    <h3>Pipe thermal conductivity (W/mK)</h3>
+                    <input type="text" name="K_wall" placeholder="Thermal conductivity of pipe material">
+                </div>
+
+                <div class="form-group">
+                    <h3>flow rate of hot water inside pipe (L/min)</h3>
+                    <input type="text" name="V_dot_LtrPerMin" placeholder="Hot water flow rate">
+                </div>
+
+                <div class="form-group">
+                    <h3>Temperature of hot water in Pipe (degC)</h3>
+                    <input type="text" name="Boiler_hotWater_temp" placeholder="Hot water entry temperature">
+                </div>
+
+                <div class="form-group">
+                    <h3>final temperature of cold fluid to be heated (degC)</h3>
+                    <input type="text" name="Finaltemp_of_coldFluid" placeholder="cold fluid final temperature">
+                </div>
+
+                <div class="form-group">
+                    <h3>Initial temperature of cold fluid to be heated (degC)</h3>
+                    <input type="text" name="init_coldFluidTemp" placeholder="cold fluid initial temperature">
+                </div>
+                <input type="submit" value="submit" class="btn">
+            </form>
+        </div>
+    </body>
+</html>
