@@ -1,11 +1,10 @@
-from selenium import webdriver
-from selenium.webdriver.support.ui import Select
-import math
-import os
-from flask import Flask, render_template, request
-
 # 1. API call to fluid properties website
-def calculatePipeLength():    
+def calculatePipeLength():
+    from selenium import webdriver
+    from selenium.webdriver.support.ui import Select
+    from flask import request
+    import math
+    import os    
     WaterTemperature = "42.5"
     AtmosphericPressure = "100"
     url = 'https://preview.irc.wisc.edu/properties/'
