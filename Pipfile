@@ -14,6 +14,7 @@ flask-sqlalchemy = "*"
 gunicorn = "*"
 pylint = "*"
 selenium = "*"
+chromedriver-binary = "*"
 
 [requires]
 python_version = "3.6"

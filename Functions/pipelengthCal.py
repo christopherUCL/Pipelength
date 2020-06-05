@@ -5,6 +5,7 @@ def calculatePipeLength():
     from flask import request
     import math
     import os    
+    import chromedriver_binary
     WaterTemperature = "42.5"
     AtmosphericPressure = "100"
     url = 'https://preview.irc.wisc.edu/properties/'
@@ -16,7 +17,9 @@ def calculatePipeLength():
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
 
-    driver=webdriver.Chrome(executable_path=str(os.environ.get("CHROMEDRIVER_PATH")),chrome_options=chrome_options)
+    #driver=webdriver.Chrome(executable_path=str(os.environ.get("CHROMEDRIVER_PATH")),chrome_options=chrome_options)
+
+    driver=webdriver.Chrome(chrome_options=chrome_options)
 
     #driver = webdriver.Chrome(executable_path="chromedriver.exe")
 
