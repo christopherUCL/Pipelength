@@ -17,10 +17,6 @@ def calculatePipeLength():
     chrome_options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
-    #driver=webdriver.Chrome(chrome_options=chrome_options)
-
-    #driver = webdriver.Chrome(executable_path="chromedriver.exe")
-
     #Select radiobutton
     driver.get(url)
     driver.find_element_by_id('International').click()
@@ -47,7 +43,6 @@ def calculatePipeLength():
     table1 = driver.find_element_by_xpath("//table/tbody/tr/td/form/table/tbody/tr[3]/td[2]/table/tbody/tr[2]/td[2]").text
     table2 = driver.find_element_by_xpath("//table/tbody/tr/td/form/table/tbody/tr[3]/td[2]/table/tbody/tr[4]/td").text
     table3 = driver.find_element_by_xpath("//table/tbody/tr/td/form/table/tbody/tr[3]/td[2]/table/tbody/tr[4]/td[2]").text
-
 
     # 2. Retrieve response of water properties
 
